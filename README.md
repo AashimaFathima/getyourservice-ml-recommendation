@@ -18,7 +18,7 @@ The ML service is built using **FastAPI** and integrates with a Spring Boot back
 ```
 Spring Boot Backend
         ↓
-FastAPI ML Microservice (/recommend)
+FastAPI ML Service (/recommend)
         ↓
 MySQL Database
   • users
