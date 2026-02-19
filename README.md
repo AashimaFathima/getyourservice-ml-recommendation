@@ -1,4 +1,4 @@
-# GetYourService – ML Recommendation Microservice
+# 🚀 GetYourService – ML Recommendation Microservice
 
 This repository contains the FASTAPI-Based ML Service powering the recommendation engine of **GetYourService**, a smart service-booking platform.
 
@@ -13,9 +13,21 @@ The system implements a **hybrid recommendation model** combining:
 
 The ML service is built using **FastAPI** and integrates with a Spring Boot backend and MySQL database.
 
-## Architecture
 
-`Spring Boot Backend         ↓ FastAPI ML Microservice (/recommend)         ↓ MySQL (users, bookings, reviews, services)`
+## 🏗 Architecture
+
+```
+Spring Boot Backend
+        ↓
+FastAPI ML Microservice (/recommend)
+        ↓
+MySQL Database
+  • users
+  • bookings
+  • reviews
+  • services
+```
+
 
 The backend sends contextual data to the ML service:
 
@@ -32,7 +44,7 @@ The backend sends contextual data to the ML service:
 
 The ML service returns the top-N ranked providers in JSON format.
 
-## Hybrid Recommendation Logic
+## 🔄 Hybrid Recommendation Logic
 
 ### Interaction Threshold
 
@@ -110,7 +122,7 @@ Used for:
 5.  Return top 5 providers
     
 
-### Prediction Formula
+### 📐Prediction Formula
 
 `r̂(u,p) = user_mean(u) + weighted_deviation`
 
@@ -125,12 +137,12 @@ Returns:
 -   charges
     
 
-## API Endpoint
+## 🔗 API Endpoint
 
 ### POST `/recommend`
 
 
-## Performance Considerations
+## ⚡Performance Considerations
 
 -   In-memory caching implemented for repeated queries
     
@@ -141,7 +153,7 @@ Returns:
 -   Hybrid fallback handles cold-start scenarios
     
 
-## Technologies Used
+## 🛠 Technologies Used
 
 -   Python 3.11
     
@@ -156,9 +168,9 @@ Returns:
 -   Uvicorn
     
 
-## Running Locally
+## ▶ Running Locally
 
-Set environment variables:
+1️⃣ Set environment variables:
 
 ```
 DB_HOST=localhost 
@@ -167,7 +179,7 @@ DB_PASSWORD=your_password
 DB_NAME=getyourservice
 ```
 
-Start the server:
+2️⃣ Start the server:
 
 `uvicorn ml_service:app --reload`
 
@@ -175,7 +187,7 @@ Swagger UI available at:
 
 `http://localhost:8000/docs`
 
-## Project Strengths
+## 💎 Project Strengths
 
 -   Hybrid adaptive recommendation
     
@@ -188,6 +200,6 @@ Swagger UI available at:
 -   Backend–ML integration
     
     
-## Demo
+## 🎬 Demo
 
 A full system demonstration video is available in the `/video` directory of this repository.
