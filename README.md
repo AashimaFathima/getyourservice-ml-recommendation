@@ -16,18 +16,7 @@ The ML service is built using **FastAPI** and integrates with a Spring Boot back
 
 ## 🏗 Architecture
 
-```
-Spring Boot Backend
-        ↓
-FastAPI ML Microservice (/recommend)
-        ↓
-MySQL Database
-  • users
-  • bookings
-  • reviews
-  • services
-```
-
+`Spring Boot Backend         ↓ FastAPI ML Microservice (/recommend)         ↓ MySQL (users, bookings, reviews, services)`
 
 The backend sends contextual data to the ML service:
 
