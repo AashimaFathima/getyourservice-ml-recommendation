@@ -1,4 +1,4 @@
-# 🚀 GetYourService – ML Recommendation Microservice
+# 🚀 GetYourService – ML Recommendation 
 
 This repository contains the FASTAPI-Based ML Service powering the recommendation engine of **GetYourService**, a smart service-booking platform.
 
