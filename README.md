@@ -58,11 +58,24 @@ Used for:
 
 ### Scoring Formula
 
-`score =     rating_weight * rating +     experience_weight * experience +     charges_weight * normalized_cost`
+
+```python
+score =
+    rating_weight     * rating +
+    experience_weight * experience +
+    charges_weight    * normalized_cost
+```
 
 Default weights:
 
-`{   "rating": 0.6,   "experience": 0.25,   "charges": 0.15 }`
+
+```json
+{
+  "rating": 0.6,
+  "experience": 0.25,
+  "charges": 0.15
+}
+```
 
 Returns:
 
@@ -116,13 +129,6 @@ Returns:
 
 ### POST `/recommend`
 
-### Example Request
-
-`{   "user_id": "10",   "city": "Tadepalligudem",   "category_id": 2,   "weights": {     "rating": 0.6,     "experience": 0.25,     "charges": 0.15   },   "method": "auto" }`
-
-### Response Example (Collaborative)
-
-`[   {     "id": "15",     "rating": 4.33,     "predicted_rating": 4.35,     "source": "collaborative",     "experience": 1,     "charges": 520   } ]`
 
 ## Performance Considerations
 
@@ -154,7 +160,12 @@ Returns:
 
 Set environment variables:
 
-`DB_HOST=localhost DB_USER=root DB_PASSWORD=your_password DB_NAME=getyourservice`
+```
+DB_HOST=localhost 
+DB_USER=your_username 
+DB_PASSWORD=your_password 
+DB_NAME=getyourservice
+```
 
 Start the server:
 
@@ -167,8 +178,6 @@ Swagger UI available at:
 ## Project Strengths
 
 -   Hybrid adaptive recommendation
-    
--   Microservice-based architecture
     
 -   Personalized predictions
     
