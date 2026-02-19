@@ -15,8 +15,17 @@ The ML service is built using **FastAPI** and integrates with a Spring Boot back
 
 
 ## 🏗 Architecture
-
-`Spring Boot Backend         ↓ FastAPI ML Microservice (/recommend)         ↓ MySQL (users, bookings, reviews, services)`
+```
+Spring Boot Backend
+        ↓
+FastAPI ML Service (/recommend)
+        ↓
+MySQL Database
+  • users
+  • bookings
+  • reviews
+  • services
+```
 
 The backend sends contextual data to the ML service:
 
@@ -35,7 +44,7 @@ The ML service returns the top-N ranked providers in JSON format.
 
 ## 🔄 Hybrid Recommendation Logic
 
-### Interaction Threshold
+ Interaction Threshold
 
 `INTERACTION_THRESHOLD = 15`
 
@@ -69,7 +78,6 @@ score =
 
 Default weights:
 
-
 ```json
 {
   "rating": 0.6,
@@ -88,8 +96,6 @@ Returns:
     
 -   charges
     
-
-Note: `score` is a ranking value, not a predicted rating.
 
 ## Collaborative Filtering (CF)
 
@@ -111,7 +117,7 @@ Used for:
 5.  Return top 5 providers
     
 
-### 📐Prediction Formula
+### 📐 Prediction Formula
 
 `r̂(u,p) = user_mean(u) + weighted_deviation`
 
@@ -128,7 +134,7 @@ Returns:
 
 ## 🔗 API Endpoint
 
-### POST `/recommend`
+ POST `/recommend`
 
 
 ## ⚡Performance Considerations
